@@ -1,0 +1,26 @@
+{
+    "name": "nodejs-minimal-ts-template",
+    "private": true,
+    "version": "0.1.0",
+    "type": "module",
+    "description": "",
+    "main": "src/index.ts",
+    "scripts": {
+        "preinstall": "touch .env",
+        "dev": "node --experimental-transform-types --env-file=.env --watch src/index.ts",
+        "test": "node --experimental-transform-types --test"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "",
+    "engines": {
+        "node": ">=20"
+    },
+    "bin": {
+        "cli-name": "./src/cli.ts"
+    },
+    "devDependencies": {
+        "@types/node": "^22.13.1",
+        "typescript": "^5.7.3"
+    }
+}
