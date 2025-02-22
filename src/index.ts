@@ -1,6 +1,8 @@
 export * from './add.ts'
 
 /**
+ * Run the CLI when the module is the main module
+ *
  * import.meta.main
  * @see https://exploringjs.com/nodejs-shell-scripting/ch_nodejs-path.html#detecting-if-module-is-main
  */
