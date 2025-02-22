@@ -6,6 +6,7 @@
         "allowImportingTsExtensions": true,
         "rewriteRelativeImportExtensions": true,
         "verbatimModuleSyntax": true,
-        "resolveJsonModule": true
+        "resolveJsonModule": true,
+        "erasableSyntaxOnly": true
     }
 }
