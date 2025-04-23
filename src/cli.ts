@@ -1,8 +1,10 @@
-#!/usr/bin/env -S node --disable-warning=ExperimentalWarning --experimental-transform-types
+#!/usr/bin/env -S node --experimental-transform-types --disable-warning=ExperimentalWarning
 import { parseArgs } from 'node:util'
 import process from 'node:process'
-import { styleText, inspect } from 'node:util'
-import pkg from '../package.json' assert { type: 'json' }
+import { styleText, inspect, debuglog } from 'node:util'
+import pkg from '../package.json' with { type: 'json' }
+
+const log = debuglog(pkg.name)
 
 // https://nodejs.org/api/util.html#utilparseargsconfig
 const { values, positionals } = parseArgs({
@@ -27,6 +29,8 @@ const { values, positionals } = parseArgs({
     strict: true,
     allowPositionals: true,
 })
+
+log('parseArgs', values, positionals)
 
 if (positionals.length < 1 || values.help) {
     help()

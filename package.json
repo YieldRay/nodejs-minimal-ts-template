@@ -7,6 +7,7 @@
     "main": "src/index.ts",
     "scripts": {
         "preinstall": "touch .env",
+        "cli": "node --experimental-transform-types --disable-warning=ExperimentalWarning src/index.ts",
         "dev": "node --experimental-transform-types --env-file=.env --watch src/index.ts",
         "test": "node --experimental-transform-types --test"
     },
@@ -20,7 +21,7 @@
         "cli-name": "./src/cli.ts"
     },
     "devDependencies": {
-        "@types/node": "^22.13.9",
-        "typescript": "^5.8.2"
+        "@types/node": "^22.14.1",
+        "typescript": "^5.8.3"
     }
 }
