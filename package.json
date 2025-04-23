@@ -1,26 +1,27 @@
 {
-    "name": "nodejs-minimal-ts-template",
-    "private": true,
-    "version": "0.1.0",
-    "type": "module",
-    "description": "",
-    "main": "src/index.ts",
-    "scripts": {
-        "preinstall": "touch .env",
-        "dev": "node --experimental-transform-types --env-file=.env --watch src/index.ts",
-        "test": "node --experimental-transform-types --test"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "",
-    "engines": {
-        "node": ">=22"
-    },
-    "bin": {
-        "cli-name": "./src/cli.ts"
-    },
-    "devDependencies": {
-        "@types/node": "^22.13.9",
-        "typescript": "^5.8.2"
-    }
+  "name": "nodejs-minimal-ts-template",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "preinstall": "touch .env",
+    "cli": "node --experimental-transform-types --disable-warning=ExperimentalWarning src/index.ts",
+    "dev": "node --experimental-transform-types --env-file=.env --watch src/index.ts",
+    "test": "node --experimental-transform-types --test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "cli-name": "./src/cli.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.12",
+    "typescript": "^5.9.3"
+  }
 }

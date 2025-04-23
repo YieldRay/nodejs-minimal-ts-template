@@ -1,27 +1,25 @@
 # nodejs-minimal-ts-template
 
-A typescript nodejs template with minimal dependencies for `node>=22` `typescript>=5.8`.
+A minimal TypeScript starter for Node.js (Node >= 22 and TypeScript >= 5.8).
 
-> [Do I need this node dependency?](https://brianmuenzenmeyer.com/posts/2024-do-i-need-this-node-dependency/)
+For small apps or microservices you often don't need extra runtime/dev tools like `ts-node`, `tsx`, `nodemon`, `dotenv`, `chalk`, `commander`, `yargs`, `mocha`, or `jest`.
+Modern Node and TypeScript provide enough primitives to keep projects lean.
 
-I think when it's time to setup a micro node app, there is no need to install
-external dependencies like\
-`ts-node` `tsx` `nodemon` `dotenv` `chalk` `commander` `yargs` `mocha` `jest`,\
-as node already have them built-in.
+This template uses Node's `--experimental-transform-types` together with TypeScript's `--erasableSyntaxOnly` to run TypeScript code directly with Node.js without any external dependencies.
 
-We use Node's
-[`--experimental-transform-types`](https://nodejs.org/api/cli.html#--experimental-transform-types)
-and TypeScript's
-[`--erasableSyntaxOnly`](https://devblogs.microsoft.com/typescript/announcing-typescript-5-8/#the---erasablesyntaxonly-option)
-to make things work.
+See also:
+
+- [Do I need this node dependency?](https://brianmuenzenmeyer.com/posts/2024-do-i-need-this-node-dependency/)
+- Node flag [--experimental-transform-types](https://nodejs.org/api/cli.html#--experimental-transform-types)
+- TypeScript flag [--erasableSyntaxOnly](https://devblogs.microsoft.com/typescript/announcing-typescript-5-8/#the---erasablesyntaxonly-option)
+
+Quick start:
 
 ```sh
-# to get started, run
+# install deps
 npm i
-# or
+# or run preinstall script
 node --run preinstall
 ```
 
-Also checkout
-[nodejs-purejs-template](https://github.com/YieldRay/nodejs-purejs-template) for
-node>16.
+Also see the plain-JS template: [nodejs-pure-js-template](https://github.com/YieldRay/nodejs-pure-js-template).
