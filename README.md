@@ -16,10 +16,10 @@ See also:
 Quick start:
 
 ```sh
+# create .env file
+touch .env
 # install deps
 npm i
-# or run preinstall script
-node --run preinstall
 ```
 
 Also see the plain-JS template: [nodejs-pure-js-template](https://github.com/YieldRay/nodejs-pure-js-template).

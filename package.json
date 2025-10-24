@@ -5,11 +5,15 @@
   "type": "module",
   "description": "",
   "main": "src/index.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
-    "preinstall": "touch .env",
     "cli": "node --experimental-transform-types --disable-warning=ExperimentalWarning src/index.ts",
     "dev": "node --experimental-transform-types --env-file=.env --watch src/index.ts",
-    "test": "node --experimental-transform-types --test"
+    "test": "node --experimental-transform-types --test",
+    "build": "tsc --declaration --sourceMap"
   },
   "keywords": [],
   "author": "",
