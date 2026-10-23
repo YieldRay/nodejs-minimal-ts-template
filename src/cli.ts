@@ -1,4 +1,4 @@
-#!/usr/bin/env -S node --experimental-transform-types --disable-warning=ExperimentalWarning
+#!/usr/bin/env node
 import { parseArgs } from "node:util";
 import process from "node:process";
 import { styleText, inspect, debuglog } from "node:util";
